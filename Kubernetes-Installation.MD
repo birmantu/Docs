@@ -29,8 +29,9 @@ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce
 yum install -y -q docker-ce >/dev/null 2>&1
 ```
 ```sh
-systemctl enable docker
-systemctl start docker
+service docker status
+service docker start
+chkconfig docker on
 ```
 ##### Disable SELinux
 ```sh
