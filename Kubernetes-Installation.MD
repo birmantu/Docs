@@ -76,8 +76,9 @@ yum install -y kubeadm-1.15.6-0.x86_64 kubelet-1.15.6-0.x86_64 kubectl-1.15.6-0.
 ```
 ##### Enable and Start kubelet service
 ```sh
-systemctl enable kubelet
-systemctl start kubelet
+service kubelet status
+service kubelet start
+chkconfig kubelet on
 ```
 ## On kmaster
 ##### Initialize Kubernetes Cluster
